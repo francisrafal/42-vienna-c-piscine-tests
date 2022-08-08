@@ -1,7 +1,7 @@
 # 42-vienna-c-piscine-tests
 Testing Tools For The 42 Vienna Piscine
 
-# What it does:
+# What the tests do
 1. Call the functions with some test data
 2. Execute norminette
 3. List all the Files that git will push to your repo (so you can make sure that the test files will not be in your final repo)
