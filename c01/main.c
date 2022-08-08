@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Put this file into the root folder of your repo */
+
 #include <stdio.h>
 #include "ex00/ft_ft.c"
 #include "ex01/ft_ultimate_ft.c"
