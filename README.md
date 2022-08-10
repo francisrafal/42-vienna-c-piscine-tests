@@ -6,6 +6,9 @@ Testing Tools For The 42 Vienna Piscine
 2. Execute norminette
 3. List all the Files that git will push to your repo (so you can make sure that the test files will not be in your final repo)
 
+# What setup_project.sh does
+1. Create all the required directories and files based on the provided PDF en.subject.pdf
+
 Feel free to use them, feedback and modify them. If you have any questions, add one under "Issues"
 If you want to add some tests, create a pull request or write me on Discord: Francis Rafal#1334
 
