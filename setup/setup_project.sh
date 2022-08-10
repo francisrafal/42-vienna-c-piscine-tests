@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Put this file into the root of your repo
+# Put this file into the empty root of your repo
 # Put the instructions file en.subject.pdf into the root of your repo
 # Execute this script with "bash setup_project.sh en.subject.pdf" 
 # (without quotation marks)
