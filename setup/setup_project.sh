@@ -30,6 +30,15 @@ touch `more en.subject.txt \
 | tr -d '\n' \
 | sed 's/ex/ ex/g'`
 
+eval $( more en.subject.txt \
+| grep "Turn-in directory\|Files to turn in" \
+| tr -d ' ' \
+| awk -F: '{print $2}' \
+| tr -d '\n' \
+| sed 's/ex/ vim -c Stdheader ex/g' \
+| sed 's/\.c/\.c -c wq \&\&/g' \
+| sed 's/\(.*\)&&/\1/' )
+
 # Remove Temporary Data
 rm en.subject.txt
 rm en.subject.pdf
