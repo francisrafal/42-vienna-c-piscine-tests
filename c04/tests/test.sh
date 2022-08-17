@@ -16,7 +16,9 @@ if [ $# -eq 0 ]; then
 	echo -e "\n${BLUE}+++ NORMINETTE +++${NC}"
 	norminette -R CheckForbiddenSourceHeader ../ex*/*.c
 	echo -e "\n${BLUE}+++ FILES IN REPO +++${NC}"
+	cd ..
 	git ls-files
+	cd tests
 elif [ ${#1} -eq 2 ] && [ $1 -eq $1 ]; then
 	echo -e "\n${BLUE}+++ TEST +++${NC}"
 	gcc -Wall -Wextra -Werror testhelpers.c test_ex$1.c
@@ -24,7 +26,9 @@ elif [ ${#1} -eq 2 ] && [ $1 -eq $1 ]; then
 	echo -e "\n${BLUE}+++ NORMINETTE +++${NC}"
 	norminette -R CheckForbiddenSourceHeader ../ex$1/*.c
 	echo -e "\n${BLUE}+++ FILES IN REPO +++${NC}"
+	cd ..
 	git ls-files
+	cd tests
 	rm ./a.out
 else
 	echo -e "Usage:\nbash test.sh [num]"
