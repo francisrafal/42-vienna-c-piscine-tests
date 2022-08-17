@@ -45,4 +45,4 @@ rm en.subject.pdf
 
 # Create .gitignore file
 
-echo -e "main.c\ntest.sh\nsetup_project.sh\nen.subject.pdf" > .gitignore
+echo -e "main.c\ntest.sh\nsetup_project.sh\nen.subject.pdf\ntests/\ntests/*" > .gitignore
