@@ -1,6 +1,22 @@
 # 42-vienna-c-piscine-tests
 Testing Tools For The 42 Vienna Piscine
 
+# Update from August 17, 2022
+There is a new test structure for c04 with the following features:
+- Test exercises seperately or test them all at once
+- Show SUCCESS or FAILURE if a test succeeded or failed (Show PLEASE CHECK MANUALLY if there is no automatic test available)
+- Fixed the bug where you couldn't declare a function twice with the same function name in different files
+
+## New Usage:
+1. Copy the folder tests to your project repo for c04
+2. Navigate to the tests folder (important!)
+3. Run 'bash tests.sh' to run all the tests at once
+4. Run `bash tests.sh XX` to only run the tests for exXX, e.g. for ex00 you would type `bash tests.sh 00`
+
+I will slowly update all the tests to the new structure.
+
+------------------------------------------------------------
+
 # What setup_project.sh does
 1. Create all the required directories and files of a project
 
