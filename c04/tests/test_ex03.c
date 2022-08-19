@@ -6,22 +6,14 @@
 /*   By: frafal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 10:52:32 by frafal            #+#    #+#             */
-/*   Updated: 2022/08/17 16:40:53 by frafal           ###   ########.fr       */
+/*   Updated: 2022/08/19 10:54:27 by frafal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "testhelpers.h"
 #include "../ex03/ft_atoi.c"
 
-void	test_ex03(void);
-
 int	main(void)
-{
-	test_ex03();
-	return (0);
-}
-
-void	test_ex03(void)
 {
 	printf_title("ex03/ft_putstr.c");
 	fflush(NULL);
@@ -67,4 +59,6 @@ void	test_ex03(void)
 	printf_testresult(ft_atoi(str8) == 0);
 	printf("\"%s\": %d\n", str8, ft_atoi(str8));
 	printf("\n");
+
+	return (0);
 }	

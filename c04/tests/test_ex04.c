@@ -6,22 +6,14 @@
 /*   By: frafal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 10:52:32 by frafal            #+#    #+#             */
-/*   Updated: 2022/08/17 19:47:30 by frafal           ###   ########.fr       */
+/*   Updated: 2022/08/19 10:54:47 by frafal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "testhelpers.h"
 #include "../ex04/ft_putnbr_base.c"
 
-void	test_ex04(void);
-
 int	main(void)
-{
-	test_ex04();
-	return (0);
-}
-
-void	test_ex04(void)
 {
 	printf_title("ex04/ft_putnbr_base.c");
 	fflush(NULL);
@@ -66,4 +58,6 @@ void	test_ex04(void)
 		printf("\n");
 		i++;
 	}
+
+	return (0);
 }	
