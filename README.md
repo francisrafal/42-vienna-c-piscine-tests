@@ -11,8 +11,8 @@ There is a new test structure for c04-c05 with the following features:
 ### Usage
 1. Copy the folder `tests/` to your project repo for c04
 2. Navigate to the `tests/` folder (important!)
-3. Run `bash tests.sh` inside this folder to run all the tests at once
-4. Run `bash tests.sh XX` to only run the tests for exXX, e.g. for ex00 you would type `bash tests.sh 00`
+3. Run `bash test.sh` inside this folder to run all the tests at once
+4. Run `bash test.sh XX` to only run the tests for exXX, e.g. for ex00 you would type `bash test.sh 00`
 
 I will slowly update all the tests to the new structure.
 
