@@ -9,8 +9,8 @@ There is a new test structure for c04-c05 with the following features:
 - Fixed the bug where you couldn't declare a function twice with the same function name in different files
 
 ### Usage
-1. Copy the folder tests to your project repo for c04
-2. Navigate to the tests folder (important!)
+1. Copy the folder `tests/` to your project repo for c04
+2. Navigate to the `tests/` folder (important!)
 3. Run 'bash tests.sh' to run all the tests at once
 4. Run `bash tests.sh XX` to only run the tests for exXX, e.g. for ex00 you would type `bash tests.sh 00`
 
