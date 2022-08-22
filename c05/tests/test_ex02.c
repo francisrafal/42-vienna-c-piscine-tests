@@ -1,45 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main02.c                                           :+:      :+:    :+:   */
+/*   test_ex02.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: celgert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 07:26:21 by celgert           #+#    #+#             */
-/*   Updated: 2022/08/17 08:36:04 by celgert          ###   ########.fr       */
+/*   Updated: 2022/08/22 12:51:31 by frafal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+#include "testhelpers.h"
 #include "../ex02/ft_iterative_power.c"
 
 int	main(void)
 {
+	printf_title("ex02/ft_iterative_power.c");
 	int	n; 
 	int	power;
 
 	n = 4;
 	power = 2;
+	printf_testresult(ft_iterative_power(n, power) == 16);
+	printf("\n");
 	printf("4^2 = 16\n");
-	printf("Your result: 4^2 = %d\n",ft_iterative_power(n,power));
+	printf("Your result: 4^2 = %d\n", ft_iterative_power(n,power));
 	printf("\n");
 
-        n = 3;
+	n = 3;
 	power = 0;
+	printf_testresult(ft_iterative_power(n, power) == 1);
+	printf("\n");
 	printf("3^0 = 1\n");
-        printf("Your result: 3^0 = %d\n",ft_iterative_power(n,power));
-        printf("\n");
+    printf("Your result: 3^0 = %d\n", ft_iterative_power(n,power));
+    printf("\n");
 	
 	n = -2;
-        power = 3;
+    power = 3;
+	printf_testresult(ft_iterative_power(n, power) == -8);
+    printf("\n");
 	printf("(-2)^3 = -8\n");
-        printf("Your result: (-2)^3 = %d\n",ft_iterative_power(n,power));
-        printf("\n");
+    printf("Your result: (-2)^3 = %d\n", ft_iterative_power(n,power));
+    printf("\n");
 
-        n = 3;
-        power = -1;
+    n = 3;
+    power = -1;
+	printf_testresult(ft_iterative_power(n, power) == 0);
+    printf("\n");
 	printf("3^(-1), power is invalid, return 0\n");
-        printf("Your result: 3^(-1) = %d\n",ft_iterative_power(n,power));
-        printf("\n");
+    printf("Your result: 3^(-1) = %d\n", ft_iterative_power(n,power));
+    printf("\n");
 
-        return (0);
+    return (0);
 }
