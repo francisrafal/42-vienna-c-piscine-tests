@@ -23,12 +23,16 @@ mkdir `pdftotext en.subject.pdf \
 | tr '\n' " "`
 
 # Create Files
-touch `more en.subject.txt \
+files=$(more en.subject.txt \
 | grep "Turn-in directory\|Files to turn in" \
 | tr -d ' ' \
-| awk -F: '{print $2}' \
+| awk -F: '{print $2 "}"}' \
 | tr -d '\n' \
-| sed 's/ex/ ex/g'`
+| sed 's/ex/ ex/g' \
+| sed 's/\//\/\{/g' \
+| sed 's/{}/{/g')
+
+eval "touch $files"
 
 eval $( more en.subject.txt \
 | grep "Turn-in directory\|Files to turn in" \
