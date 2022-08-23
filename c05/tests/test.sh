@@ -9,7 +9,7 @@ if [ $# -eq 0 ]; then
 	for i in {00..08}
 	do
 		echo -e "\n${BLUE}+++ TEST +++${NC}"
-		gcc -Wall -Wextra -Werror testhelpers.c test_ex$i.c
+		gcc -Wall -Wextra -Werror testhelpers.c test_ex$i.c -lm
 		./a.out
 		rm ./a.out
 	done
@@ -21,7 +21,7 @@ if [ $# -eq 0 ]; then
 	cd tests
 elif [ ${#1} -eq 2 ] && [ $1 -eq $1 ]; then
 	echo -e "\n${BLUE}+++ TEST +++${NC}"
-	gcc -Wall -Wextra -Werror testhelpers.c test_ex$1.c
+	gcc -Wall -Wextra -Werror testhelpers.c test_ex$1.c -lm
 	./a.out
 	echo -e "\n${BLUE}+++ NORMINETTE +++${NC}"
 	norminette -R CheckForbiddenSourceHeader ../ex$1/*.c

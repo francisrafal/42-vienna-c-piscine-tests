@@ -6,7 +6,7 @@
 /*   By: celgert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 07:26:21 by celgert           #+#    #+#             */
-/*   Updated: 2022/08/22 18:07:36 by frafal           ###   ########.fr       */
+/*   Updated: 2022/08/23 17:48:44 by frafal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,14 +64,49 @@ int	main(void)
 	printf_testresult(ft_is_prime(77) == 0);
 	printf("\n");
 	printf("Expected Result: 77 is not prime, return 0\n");
-	printf("Your Result: Is 77 prime?  %d\n",ft_is_prime(n));
+	printf("Your Result: Is 77 prime?  %d\n", ft_is_prime(n));
+	printf("\n");
+
+	n = 289;
+	printf_testresult(ft_is_prime(289) == 0);
+	printf("\n");
+	printf("Expected Result: 289 is not prime, return 0\n");
+	printf("Your Result: Is 289 prime?  %d\n", ft_is_prime(n));
+	printf("\n");
+
+	n = 361;
+	printf_testresult(ft_is_prime(361) == 0);
+	printf("\n");
+	printf("Expected Result: 361 is not prime, return 0\n");
+	printf("Your Result: Is 361 prime?  %d\n", ft_is_prime(n));
+	printf("\n");
+
+	n = 529;
+	printf_testresult(ft_is_prime(529) == 0);
+	printf("\n");
+	printf("Expected Result: 529 is not prime, return 0\n");
+	printf("Your Result: Is 529 prime?  %d\n", ft_is_prime(n));
+	printf("\n");
+
+	n = 841;
+	printf_testresult(ft_is_prime(841) == 0);
+	printf("\n");
+	printf("Expected Result: 841 is not prime, return 0\n");
+	printf("Your Result: Is 841 prime?  %d\n", ft_is_prime(n));
+	printf("\n");
+
+	n = 961;
+	printf_testresult(ft_is_prime(961) == 0);
+	printf("\n");
+	printf("Expected Result: 961 is not prime, return 0\n");
+	printf("Your Result: Is 961 prime?  %d\n", ft_is_prime(n));
 	printf("\n");
 
 	n = 6899;
 	printf_testresult(ft_is_prime(6899) == 1);
 	printf("\n");
 	printf("Expected Result: 6899 is prime, return 1\n");
-	printf("Your Result: Is 6899 prime?  %d\n",ft_is_prime(n));
+	printf("Your Result: Is 6899 prime?  %d\n", ft_is_prime(n));
 	printf("\n");
 
 	n = 535;
