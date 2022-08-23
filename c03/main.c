@@ -84,6 +84,8 @@ void	test_ex01(void)
 	char	equal[] = "abcdefg";
 	char	greater[] = "abceefg";
 	char	greater2[] = "abcdefgx";
+	char	empty[] = "";
+	char	different[] = "bcde";
 	size_t	n = 0;
 	
 	while (n < 11)
@@ -113,6 +115,16 @@ void	test_ex01(void)
 		printf("%d\n", ft_strncmp(greater2, comp_str, n));
 		printf("strncmp: \"%s\" > \"%s\": ", greater2, comp_str);
 		printf("%d\n", strncmp(greater2, comp_str, n));
+		printf("\n");
+		printf("ft_strncmp: \"%s\" > \"%s\": ", empty, comp_str);
+		printf("%d\n", ft_strncmp(empty, comp_str, n));
+		printf("strncmp: \"%s\" > \"%s\": ", empty, comp_str);
+		printf("%d\n", strncmp(empty, comp_str, n));
+		printf("\n");
+		printf("ft_strncmp: \"%s\" > \"%s\": ", different, comp_str);
+		printf("%d\n", ft_strncmp(different, comp_str, n));
+		printf("strncmp: \"%s\" > \"%s\": ", different, comp_str);
+		printf("%d\n", strncmp(different, comp_str, n));
 		n += 2;
 	}
 }
