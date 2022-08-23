@@ -23,21 +23,19 @@ mkdir `pdftotext en.subject.pdf \
 | tr '\n' " "`
 
 # Create Files
-touch `more en.subject.txt \
+files=$(more en.subject.txt \
 | grep "Turn-in directory\|Files to turn in" \
 | tr -d ' ' \
-| awk -F: '{print $2}' \
+| awk -F: '{print $2 "}"}' \
 | tr -d '\n' \
-| sed 's/ex/ ex/g'`
+| sed 's/ex/ ex/g' \
+| sed 's/\//\/\{/g' \
+| sed 's/{}/{/g' \
+| sed -E 's/\{([[:alpha:]_.]+)}/\1/g')
 
-eval $( more en.subject.txt \
-| grep "Turn-in directory\|Files to turn in" \
-| tr -d ' ' \
-| awk -F: '{print $2}' \
-| tr -d '\n' \
-| sed 's/ex/ vim -c Stdheader ex/g' \
-| sed 's/\.c/\.c -c wq \&\&/g' \
-| sed 's/\(.*\)&&/\1/' )
+eval "touch $files"
+
+for file in **/**; do [[ -f "$file" ]] && vim -c Stdheader -c wq "$file"; done
 
 # Remove Temporary Data
 rm en.subject.txt
