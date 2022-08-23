@@ -6,7 +6,7 @@
 /*   By: frafal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 10:52:32 by frafal            #+#    #+#             */
-/*   Updated: 2022/08/19 10:54:27 by frafal           ###   ########.fr       */
+/*   Updated: 2022/08/23 15:13:47 by frafal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	main(void)
 {
-	printf_title("ex03/ft_putstr.c");
+	printf_title("ex03/ft_atoi.c");
 	fflush(NULL);
 	char	*str1;
 	char	*str2;
