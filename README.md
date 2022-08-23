@@ -1,15 +1,15 @@
 # 42-vienna-c-piscine-tests
 Testing Tools For The 42 Vienna Piscine
 
-## How To Test c04-c05
+## How To Test c03-c05
 
-There is a new test structure for c04-c05 with the following features:
+There is a new test structure for c03-c05 with the following features:
 - Test exercises seperately or test them all at once
 - Show SUCCESS or FAILURE if a test succeeded or failed (Show PLEASE CHECK MANUALLY if there is no automatic test available)
 - Fixed the bug where you couldn't declare a function twice with the same function name in different files
 
 ### Usage
-1. Copy the folder `tests/` to your project repo for c04
+1. Copy the folder `tests/` to your project repo for c03/c04/c05
 2. Navigate to the `tests/` folder (important!)
 3. Run `bash test.sh` inside this folder to run all the tests at once
 4. Run `bash test.sh XX` to only run the tests for exXX, e.g. for ex00 you would type `bash test.sh 00`
@@ -17,7 +17,7 @@ There is a new test structure for c04-c05 with the following features:
 I will slowly update all the tests to the new structure.
 
 ------------------------------------------------------------
-## How To Test c01-c03
+## How To Test c01-c02
 
 ### What setup_project.sh does
 1. Create all the required directories and files of a project
