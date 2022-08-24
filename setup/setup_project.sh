@@ -1,8 +1,9 @@
 #!/bin/bash
 
+# This script creates the required folders and files for your Piscine Project
 # Put this file into the empty root of your repo
 # Execute this script with "bash setup_project.sh <C_PROJECT_NUM>" 
-# 	<C_PROJECT_NUM> should from 0 to 13
+# 	<C_PROJECT_NUM> should be a number from 0 to 13
 #	e.g. "bash setup_project.sh 0" for project c_00
 # (without quotation marks)
 
