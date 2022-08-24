@@ -6,7 +6,7 @@
 /*   By: frafal <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:40:50 by frafal            #+#    #+#             */
-/*   Updated: 2022/08/24 18:38:14 by frafal           ###   ########.fr       */
+/*   Updated: 2022/08/24 19:00:46 by frafal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,26 @@ int	main(void)
 	int	ctrl_arr5[] = {-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	int	*ctrl_arr6 = NULL;
 	int *ctrl_arr[6] = {ctrl_arr1, ctrl_arr2, ctrl_arr3, ctrl_arr4, ctrl_arr5, ctrl_arr6};
+	int ctrl_ret[] = {3, 4, 5, 0, 20, 0};
+	int ret;
 	
 	range_ptr = &ptr;
 	i = 0;
 	while (i < 6)
 	{
-		ft_ultimate_range(range_ptr, min[i], max[i]);
-		printf_testresult(arrcmp(*range_ptr, ctrl_arr[i], max[i] - min[i]) == 0);
+		ret = ft_ultimate_range(range_ptr, min[i], max[i]);
+		printf_testresult(arrcmp(*range_ptr, ctrl_arr[i], max[i] - min[i]) == 0 && ret == ctrl_ret[i]);
 		printf("\n");
 		printf("min = %d, max = %d\n", min[i], max[i]);
-		printf("Expected Result: ");
+		printf("Expected Result:\n");
+		printf("Range: ");
 		printf_range(ctrl_arr[i], max[i] - min[i]);
-		printf("Your Result: ");
+		printf("Return Value: %d\n", ctrl_ret[i]); 
+		printf("\n");
+		printf("Your Result:\n");
+		printf("Range: ");
 		printf_range(*range_ptr, max[i] - min[i]);
+		printf("Return Value: %d\n", ret); 
 		printf("\n");
 		i++;
 	}
