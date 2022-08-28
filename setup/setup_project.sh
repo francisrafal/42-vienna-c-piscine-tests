@@ -12,7 +12,7 @@ c_project_num=`expr $1 \* 2 + 58642`
 if [[ $c_project_num -gt 0 ]]
 then
   wget -bqc https://cdn.intra.42.fr/pdf/pdf/$c_project_num/en.subject.pdf;
-  while [ ! -f ./en.subject.pdf ]; do sleep 1; done
+  while [ ! -f ./en.subject.pdf ]; do sleep 3; done  #sleep 3 instead 1 as sometimes computer/connection is slow
 fi
 
 # Create Directories
@@ -32,7 +32,7 @@ files=$(more en.subject.txt \
 | sed 's/ex/ ex/g' \
 | sed 's/\//\/\{/g' \
 | sed 's/{}/{/g' \
-| sed 's/{\([^,}]*\)}/\1/g')  #2th option: sed -E 's/\{([[:alpha:]_.]+)}/\1/g'
+| sed 's/{\([^,}]*\)}/\1/g') 
 
 eval "touch $files"
 
