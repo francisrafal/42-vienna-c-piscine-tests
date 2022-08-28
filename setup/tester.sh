@@ -4,9 +4,9 @@ current_dir=$PWD
 parentdir="$(dirname "$(pwd)")"
 
 foldername="$(basename "$PWD")" 
-echo $DIR
-echo $parentdir
-echo $current_dir
+#echo $DIR
+#echo $parentdir
+#echo $current_dir
 if [[ -f "./ex01/ft_print_alphabet.c" || "${foldername,,}" == "c00"  ]]; then 
     echo "Sorry, currently no test exists for c00"
 
@@ -63,12 +63,7 @@ elif [[ -f "./ex01/ft_strncmp.c" || "${foldername,,}" == "c09" ]]; then
     echo "Sorry, currently no test exist for c09"
 elif [[ -f "./ex00/libft_creator.sh" || "${foldername,,}" == "c10" ]]; then 
     echo "Sorry, currently no test exists for c10"
-elif [ -f "${foldername,,}" == "c11" ]; then 
-    echo "Sorry, currently no test exists for c11."
-elif [ -f "${foldername,,}" == "c12" ]; then 
-    echo "Sorry, currently no test exists for c12."
-elif [ -f "${foldername,,}" == "c13" ]; then 
-    echo "Sorry, currently no test exists for c13"
+
 elif [[ -f "./ex01/ft_strncmp.c" || "${foldername,,}" == "shell00" || "${foldername,,}" == "shell_00" ]]; then 
     echo "Testing shell00"
 cp $DIR/shel00/test.sh $current_dir/test.sh
