@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "../ex00/ft_print_alphabet.c"
+#include "ex01/ft_print_alphabet.c"
 int	main()
 {
 	ft_print_alphabet();
