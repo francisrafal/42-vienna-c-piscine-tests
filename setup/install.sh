@@ -54,7 +54,7 @@ fi
 whiptail --title "Installation complete" --msgbox "USAGE: type 42tester in command line (i.e. in Directory c00 or c01) \nto run a test. 42update to update, 42setup X to setup project X" 8 78
 
 echo -en "\nUSAGE: type 42tester in command line (i.e. in Directory c00 or c01) \nto run a test\n\nTo update the script, just type 42update\n\nTo setup a project, 42setup X , where X is project no, i.e. 2 for C02"
-echo "Please close this terminal window and open the terminal again for script to work"
+echo -en "\nPlease close this terminal window and open the terminal again for script to work"
 
 else
     echo "User selected No, exit status was $?."
