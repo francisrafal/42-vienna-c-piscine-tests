@@ -15,7 +15,7 @@ rm -rf 42-vienna-c-piscine-tests
 
 # download github
 # git clone --recursive https://github.com/francisrafal/42-vienna-c-piscine-tests.git
-git clone --recursive https://github.com/kayawu/42-vienna-c-piscine-tests.git
+git clone --recursive https://github.com/hubble42/42-vienna-c-piscine-tests.git
 
 cp -r 42-vienna-c-piscine-tests ..
 
