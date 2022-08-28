@@ -26,7 +26,7 @@ cd "$HOME"/42-vienna-c-piscine-tests || exit
 
 chmod 755 "$HOME"/42-vienna-c-piscine-tests/setup/install.sh
 chmod 755 "$HOME"/42-vienna-c-piscine-tests/setup/setup_project.sh
-chmod 755 "$HOME"/42-vienna-c-piscine-tests/setup/tester.sh
+chmod 755 "$HOME"/42-vienna-c-piscine-tests/tester.sh
 
 RC_FILE="$HOME/.zshrc" # MAC
 
@@ -42,7 +42,7 @@ echo "try to add alias in file: $RC_FILE"
 # set up the alias
 if ! grep "42tester=" "$RC_FILE" &> /dev/null; then
 	echo "42tester alias not present"
-	printf "\nalias 42tester=%s/42-vienna-c-piscine-tests/setup/tester.sh\n" "$HOME" >> "$RC_FILE"
+	printf "\nalias 42tester=%s/42-vienna-c-piscine-tests/tester.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
 if ! grep "42update=" "$RC_FILE" &> /dev/null; then
