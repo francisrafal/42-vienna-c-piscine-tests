@@ -16,10 +16,11 @@ if [[ -f "./ex01/ft_print_alphabet.c" || "${foldername,,}" == "c00"  ]]; then
 elif [[ -f "./ex00/ft_ft.c" || "${foldername,,}" == "c01" ]]; then 
     echo "Testing c01"
 cp $DIR/c01/main.c $current_dir/main.c
-cp $DIR/c01/test.sh $current_dir/test.sh
-eval "bash $current_dir/test.sh"
-rm $current_dir/test.sh
+cp $DIR/c01/tester.sh $current_dir/tester.sh
+eval "bash $current_dir/tester.sh"
+rm $current_dir/tester.sh
 rm $current_dir/main.c
+rm $current_dir/main_*.c
 elif [[ -f "./ex01/ft_strncpy.c" || "${foldername,,}" == "c02" ]]; then 
     echo "Testing c02"
 cp $DIR/c02/main.c $current_dir/main.c
