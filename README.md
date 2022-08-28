@@ -28,7 +28,7 @@ CD into the Directory where your project is, i.e. c01, then type:
 CD into the Directory where you clonned your repository, then type:
 
 ```
-42tester 3
+42setup 3
 ```
 3 means c03, change it to a digit of the project between 0-13 
 "42tester 3" will create all ex00.. directories of project c03 in the current folder
