@@ -24,6 +24,10 @@ rm -rf temp_____
 
 cd "$HOME"/42-vienna-c-piscine-tests || exit
 
+chmod 755 "$HOME"/42-vienna-c-piscine-tests/setup/install.sh
+chmod 755 "$HOME"/42-vienna-c-piscine-tests/setup/setup_project.sh
+chmod 755 "$HOME"/42-vienna-c-piscine-tests/setup/tester.sh
+
 RC_FILE="$HOME/.zshrc" # MAC
 
 if [ "$(uname)" != "Darwin" ]; then
