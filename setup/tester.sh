@@ -66,7 +66,7 @@ elif [[ -f "./ex00/libft_creator.sh" || "${foldername,,}" == "c10" ]]; then
 
 elif [[ -f "./ex01/ft_strncmp.c" || "${foldername,,}" == "shell00" || "${foldername,,}" == "shell_00" ]]; then 
     echo "Testing shell00"
-cp $DIR/shel00/test.sh $current_dir/test.sh
+cp $DIR/shell00/test.sh $current_dir/test.sh
 eval "bash $current_dir/test.sh"
 rm $current_dir/test.sh
 
