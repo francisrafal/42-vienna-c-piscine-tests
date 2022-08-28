@@ -1,6 +1,38 @@
 # 42-vienna-c-piscine-tests
 Testing Tools For The 42 Vienna Piscine
 
+## How To Install the Script
+Run one of this command in Terminal Window:
+```
+bash -c "$(curl -fsSL https://raw.github.com/kayawu/42-vienna-c-piscine-tests/master/setup/install.sh)"
+
+OR using master repository of Francis (if updated) :
+
+bash -c "$(curl -fsSL https://raw.github.com/francisrafal/42-vienna-c-piscine-tests/master/setup/install.sh)"
+
+```
+
+## How To Update the Script
+Run this command in Terminal Window:
+```
+42update
+```
+### How to run Tester
+CD into the Directory where your project is, i.e. c01, then type:
+
+```
+42tester
+```
+
+### How to setup a Project
+CD into the Directory where you clonned your repository, then type:
+
+```
+42tester 3
+```
+3 means c03, change it to a digit of the project between 0-13 
+"42tester 3" will create all ex00.. directories of project c03 in the current folder
+
 ## How To Test c03-c05
 
 There is a new test structure for c03-c05 with the following features:
