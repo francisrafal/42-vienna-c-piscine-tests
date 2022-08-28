@@ -11,7 +11,11 @@ foldername="$(basename "$PWD")"
 #echo $parentdir
 #echo $current_dir
 if [[ -f "./ex01/ft_print_alphabet.c" || "${foldername,,}" == "c00"  ]]; then 
-    echo "Sorry, currently no test exists for c00"
+cp $DIR/c00/main_ex*.c $current_dir/
+cp $DIR/c00/tester.sh $current_dir/tester.sh
+eval "bash $current_dir/tester.sh"
+rm $current_dir/tester.sh
+rm $current_dir/main_*.c
 
 elif [[ -f "./ex00/ft_ft.c" || "${foldername,,}" == "c01" ]]; then 
     echo "Testing c01"
