@@ -32,14 +32,33 @@ eval "bash $current_dir/tests/test.sh"
 rm -rf $current_dir/tests
 elif [[ -f "./ex00/ft_strlen.c" || "${foldername,,}" == "c04" ]]; then 
     echo "Testing c04"
+cp -R $DIR/c04/tests $current_dir
+cd $current_dir/tests
+eval "bash $current_dir/tests/test.sh"
+rm -rf $current_dir/tests
 elif [[ -f "./ex00/ft_iterative_factorial.c" || "${foldername,,}" == "c05" ]]; then 
     echo "Testing c05"
+cp -R $DIR/c05/tests $current_dir
+cd $current_dir/tests
+eval "bash $current_dir/tests/test.sh"
+rm -rf $current_dir/tests
 elif [[ -f "./ex00/ft_print_program_name.c" || "${foldername,,}" == "c06" ]]; then 
-    echo "Testing c06"
+    echo "Sorry, currently no test exists for c06"
 elif [[ -f "./ex00/ft_strdup.c" || "${foldername,,}" == "c07" ]]; then 
     echo "Testing c07"
+cp -R $DIR/c07/tests $current_dir
+cd $current_dir/tests
+eval "bash $current_dir/tests/test.sh"
+rm -rf $current_dir/tests
 elif [[ -f "./ex01/ft_boolean.h" || "${foldername,,}" == "c08" ]]; then 
     echo "Testing c08"
+cp $DIR/c08/ex01/test_ex01.c $current_dir/ex01/test_ex01.c
+cp $DIR/c08/ex03/test_ex03.c $current_dir/ex03/test_ex03.c
+cp $DIR/c08/test.sh $current_dir/test.sh
+eval "bash $current_dir/test.sh"
+rm $current_dir/test.sh
+rm $current_dir/ex01/test_ex01.c
+rm $current_dir/ex03/test_ex03.c
 elif [[ -f "./ex01/ft_strncmp.c" || "${foldername,,}" == "c09" ]]; then 
     echo "Sorry, currently no test exist for c09"
 elif [[ -f "./ex00/libft_creator.sh" || "${foldername,,}" == "c10" ]]; then 
@@ -52,8 +71,12 @@ elif [ -f "${foldername,,}" == "c13" ]; then
     echo "Sorry, currently no test exists for c13"
 elif [[ -f "./ex01/ft_strncmp.c" || "${foldername,,}" == "shell00" || "${foldername,,}" == "shell_00" ]]; then 
     echo "Testing shell00"
+cp $DIR/shel00/test.sh $current_dir/test.sh
+eval "bash $current_dir/test.sh"
+rm $current_dir/test.sh
+
 elif [[ -f "./ex01/ft_strncmp.c" || "${foldername,,}" == "shell01" || "${foldername,,}" == "shell_01"  ]]; then 
-    echo "Testing shell01."
+    echo "Sorry, currently no test exists for shell01"
 else 
-    echo "Please run it inside the directory where your exercise is, i.e. c01"
+    echo "Please run the script inside the directory where your exercise is, i.e. c01"
 fi
