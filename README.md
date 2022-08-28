@@ -4,7 +4,7 @@ Testing Tools For The 42 Vienna Piscine
 ## How To Install the Script
 Run one of this command in Terminal Window:
 ```
-bash -c "$(curl -fsSL https://raw.github.com/kayawu/42-vienna-c-piscine-tests/master/setup/install.sh)"
+bash -c "$(curl -fsSL https://raw.github.com/hubble42/42-vienna-c-piscine-tests/master/setup/install.sh)"
 
 OR using master repository of Francis (if updated) :
 
