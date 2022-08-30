@@ -53,3 +53,7 @@ rm en.subject.pdf
 # Create .gitignore file
 
 echo -e "main.c\ntest.sh\nsetup_project.sh\nen.subject.pdf\ntests/\ntests/*" > .gitignore
+
+ls */*
+echo "Please check also manually if all files are created correctly"
+echo "as sometimes some files may miss.."
