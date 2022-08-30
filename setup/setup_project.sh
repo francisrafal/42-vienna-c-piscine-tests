@@ -7,6 +7,12 @@
 #	e.g. "bash setup_project.sh 0" for project c_00
 # (without quotation marks)
 
+if [ -z "$1" ]
+  then
+    echo "USAGE: 42setup X"
+    echo "X is a number from 0-13, i.e. to setup Project c03 type 42setup 3"
+fi
+
 # Download document by project number
 c_project_num=`expr $1 \* 2 + 58642`
 if [[ $c_project_num -gt 0 ]]
