@@ -3,6 +3,7 @@
 if [ "$(uname)" == "Darwin" ]; then # MAC
 	brew install dialog
 	sleep 5
+	alias whiptail=dialog
 	RC_FILE="$HOME/.zshrc"
 	if ! grep "whiptail=" "$RC_FILE" &> /dev/null; then
 		printf "\nalias whiptail=dialog\n" "$HOME" >> "$RC_FILE"
