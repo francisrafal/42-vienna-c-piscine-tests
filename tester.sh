@@ -1,16 +1,9 @@
 #!/bin/bash
-#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-DIR="$HOME/42-vienna-c-piscine-tests"
-#DIR = "$(echo "$HOME/42-vienna-c-piscine-tests")"
-current_dir=$PWD
-parentdir="$(dirname "$(pwd)")"
 
+DIR="$HOME/42-vienna-c-piscine-tests"
+current_dir=$PWD
 foldername="$(basename "$PWD" | tr '[:upper:]' '[:lower:]')" 
 
-#echo "$DIR"
-#DIR = eval "$(dirname $DIR)"
-#echo $parentdir
-#echo $current_dir
 if [[ -f "./ex01/ft_print_alphabet.c" || "${foldername}" == "c00"  ]]; then 
 cp $DIR/c00/main_ex*.c $current_dir/
 cp $DIR/c00/tester.sh $current_dir/tester.sh
