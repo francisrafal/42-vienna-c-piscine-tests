@@ -1,5 +1,14 @@
 #!/bin/bash
 
+if [ "$(uname)" == "Darwin" ]; then # MAC
+	brew install dialog
+	sleep 5
+	RC_FILE="$HOME/.zshrc"
+	if ! grep "whiptail=" "$RC_FILE" &> /dev/null; then
+		printf "\nalias whiptail=dialog\n" "$HOME" >> "$RC_FILE"
+	fi
+fi
+
 if (whiptail --title "42-vienna-c-piscine-tests Installer/Updater"\
  --yesno "Do you want to install/update the 42-vienna-c-piscine-tests?\nInstallation directory: $HOME/42-vienna-c-piscine-tests" 8 78); then
     echo "User selected Yes, exit status was $?."
