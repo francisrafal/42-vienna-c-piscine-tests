@@ -1,18 +1,12 @@
 #!/bin/bash
+echo "This script will install/update the 42-vienna-c-piscine-tests"
+echo "Installation directory: $HOME/42-vienna-c-piscine-tests"
+echo 
+read -p "Are you sure? (y/n) " -n 1 -r
+echo    # (optional) move to a new line
 
-if [ "$(uname)" == "Darwin" ]; then # MAC
-	brew install dialog
-	sleep 5
-	alias whiptail=dialog
-	RC_FILE="$HOME/.zshrc"
-	if ! grep "whiptail=" "$RC_FILE" &> /dev/null; then
-		printf "\nalias whiptail=dialog\n" "$HOME" >> "$RC_FILE"
-	fi
-fi
-
-if (whiptail --title "42-vienna-c-piscine-tests Installer/Updater"\
- --yesno "Do you want to install/update the 42-vienna-c-piscine-tests?\nInstallation directory: $HOME/42-vienna-c-piscine-tests" 8 78); then
-    echo "User selected Yes, exit status was $?."
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
 
 cd "$HOME" || exit
 
@@ -65,11 +59,11 @@ if ! grep "42setup=" "$RC_FILE" &> /dev/null; then
 	printf "\nalias 42setup=%s/42-vienna-c-piscine-tests/setup/setup_project.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
-whiptail --title "Installation complete" --msgbox "USAGE: type 42tester in command line (i.e. in Directory c00 or c01) \nto run a test. 42update to update, 42setup X to setup project X" 8 78
+echo -en "Installation complete\n"
 
 echo -en "\nUSAGE: type 42tester in command line (i.e. in Directory c00 or c01) \nto run a test\n\nTo update the script, just type 42update\n\nTo setup a project, 42setup X , where X is project no, i.e. 2 for C02"
 echo -en "\nPlease close this terminal window and open the terminal again for script to work"
 
 else
-    echo "User selected No, exit status was $?."
+    echo "User selected No, exiting"
 fi
