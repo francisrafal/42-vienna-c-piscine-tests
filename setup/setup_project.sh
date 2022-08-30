@@ -36,7 +36,8 @@ files=$(more en.subject.txt \
 
 eval "touch $files"
 
-for file in **/**; do [[ -f "$file" ]] && vim -c Stdheader -c wq "$file"; done
+for file in **/*.c; do [[ -f "$file" ]] && vim -c Stdheader -c wq "$file"; done
+for file in **/*.h; do [[ -f "$file" ]] && vim -c Stdheader -c wq "$file"; done
 
 # Remove Temporary Data
 rm en.subject.txt
