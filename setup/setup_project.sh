@@ -18,7 +18,7 @@ fi
 c_project_num=`expr $1 \* 2 + 58642`
 if [[ $c_project_num -gt 0 ]]
 then
-  wget -bqc https://cdn.intra.42.fr/pdf/pdf/$c_project_num/en.subject.pdf;
+  curl -o en.subject.pdf -bqc https://cdn.intra.42.fr/pdf/pdf/$c_project_num/en.subject.pdf;
   while [ ! -f ./en.subject.pdf ]; do sleep 3; done  #sleep 3 instead 1 as sometimes computer/connection is slow
 fi
 
