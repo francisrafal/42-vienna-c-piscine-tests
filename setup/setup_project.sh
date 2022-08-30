@@ -11,6 +11,7 @@ if [ -z "$1" ]
   then
     echo "USAGE: 42setup X"
     echo "X is a number from 0-13, i.e. to setup Project c03 type 42setup 3"
+    exit 1
 fi
 
 # Download document by project number
