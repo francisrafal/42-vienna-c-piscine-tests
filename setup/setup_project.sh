@@ -36,7 +36,7 @@ files=$(more en.subject.txt \
 | tr -d ' ' \
 | awk -F: '{print $2 "}"}' \
 | tr -d '\n' \
-| sed 's/ex/ ex/g' \
+| sed 's/}ex/} ex/g' \
 | sed 's/\//\/\{/g' \
 | sed 's/{}/{/g' \
 | sed 's/{\([^,}]*\)}/\1/g') 
