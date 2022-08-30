@@ -1,6 +1,6 @@
 #!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-
+#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DIR="$HOME/42-vienna-c-piscine-tests"
 #DIR = "$(echo "$HOME/42-vienna-c-piscine-tests")"
 current_dir=$PWD
 parentdir="$(dirname "$(pwd)")"
