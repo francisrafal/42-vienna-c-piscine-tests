@@ -16,7 +16,11 @@ fi
 
 if ! [ -x "$(command -v pdftotext)" ]; then
   echo 'Error: pdftotext is not installed. It is necessary to parse project files from pdf.' >&2
-  echo 'on mac: brew install --cask pdftotext'
+  echo
+  echo 'on mac: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+  echo 'echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile'
+  echo 'brew install --cask pdftotext'
+  echo
   echo 'on linux: sudo apt-get install -y xpdf'
   exit 1
 fi
