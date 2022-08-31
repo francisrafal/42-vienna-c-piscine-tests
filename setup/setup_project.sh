@@ -14,6 +14,13 @@ if [ -z "$1" ]
     exit 1
 fi
 
+if ! [ -x "$(command -v pdftotext)" ]; then
+  echo 'Error: pdftotext is not installed. It is necessary to parse project files from pdf.' >&2
+  echo 'on mac: brew install --cask pdftotext'
+  echo 'on linux: sudo apt-get install -y xpdf'
+  exit 1
+fi
+
 # Download document by project number
 c_project_num=`expr $1 \* 2 + 58642`
 if [[ $c_project_num -gt 0 ]]
