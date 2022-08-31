@@ -46,19 +46,19 @@ echo "try to add alias in file: $RC_FILE"
 # set up the alias
 if ! grep "42tester=" "$RC_FILE" &> /dev/null; then
 	echo "42tester alias not present"
-	alias 42tester=$HOME/42-vienna-c-piscine-tests/tester.sh
+	eval "alias 42tester=$HOME/42-vienna-c-piscine-tests/tester.sh"
 	printf "\nalias 42tester=%s/42-vienna-c-piscine-tests/tester.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
 if ! grep "42update=" "$RC_FILE" &> /dev/null; then
 	echo "42update alias not present. Adding it"
-	alias 42update=$HOME/42-vienna-c-piscine-tests/setup/install.sh
+	eval "alias 42update=$HOME/42-vienna-c-piscine-tests/setup/install.sh"
 	printf "\nalias 42update=%s/42-vienna-c-piscine-tests/setup/install.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
 if ! grep "42setup=" "$RC_FILE" &> /dev/null; then
 	echo "42setup alias not present. Adding it"
-	alias 42setup=$HOME/42-vienna-c-piscine-tests/setup/setup_project.sh
+	eval "alias 42setup=$HOME/42-vienna-c-piscine-tests/setup/setup_project.sh"
 	printf "\nalias 42setup=%s/42-vienna-c-piscine-tests/setup/setup_project.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
