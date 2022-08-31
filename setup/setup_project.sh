@@ -31,14 +31,13 @@ mkdir `pdftotext en.subject.pdf \
 | tr '\n' " "`
 
 # Create Files
-files=$(more en.subject.txt \
-| grep "Turn-in directory\|Files to turn in" \
-| tr -d ' ' \
-| awk -F: '{print $2 "}"}' \
-| tr -d '\n' \
-| sed 's/}ex/} ex/g' \
-| sed 's/\//\/\{/g' \
-| sed 's/{}/{/g' \
+files=$(more en.subject.txt | awk '/Turn-in directory/,/Allowed functions/{if(/Allowed functions/) next; print $0 }' | tr '\n' ' ' \
+| sed 's/ Files to turn in : /{/g' \
+| sed 's/Turn-in directory : //g' \
+| sed 's/ ex/} ex/g' \
+| sed 's/, /,/g' \
+| sed 's/$/}/' \
+| sed 's/ }/}/' \
 | sed 's/{\([^,}]*\)}/\1/g') 
 
 eval "touch $files"
