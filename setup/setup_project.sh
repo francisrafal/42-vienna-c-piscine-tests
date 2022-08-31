@@ -22,6 +22,7 @@ if ! [ -x "$(command -v pdftotext)" ]; then
   echo 'brew install --cask pdftotext'
   echo
   echo 'on linux: sudo apt-get install -y xpdf'
+  echo
   exit 1
 fi
 
