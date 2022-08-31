@@ -45,6 +45,7 @@ mkdir `pdftotext en.subject.pdf \
 # Create Files
 files=$(more en.subject.txt | awk '/Turn-in directory/,/Allowed functions/{if(/Allowed functions/) next; print $0 }' | tr '\n' ' ' \
 | sed 's/, and files needed for your program//g' \
+| sed 's/Your program files//g' \
 | sed 's/ Files to turn in : /{/g' \
 | sed 's/Turn-in directory : //g' \
 | sed 's/ ex/} ex/g' \
