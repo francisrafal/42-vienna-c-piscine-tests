@@ -62,10 +62,9 @@ if ! grep "42setup=" "$RC_FILE" &> /dev/null; then
 	printf "\nalias 42setup=%s/42-vienna-c-piscine-tests/setup/setup_project.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
-echo -en "Installation complete\n"
-
 echo -en "\nUSAGE: type 42tester in command line (i.e. in Directory c00 or c01) \nto run a test\n\nTo update the script, just type 42update\n\nTo setup a project, 42setup X , where X is project no, i.e. 2 for C02"
-echo -en "\nPlease close this terminal window and open the terminal again for script to work"
+echo -en "\nPlease close this terminal window and open the terminal again for script to work\n"
+echo "Install/Update finished."
 
 else
     echo "User selected No, exiting"
